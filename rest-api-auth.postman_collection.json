@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "73eb5623-c68f-48e0-9613-74ae84be32f5",
+		"name": "rest-api-auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15324428"
+	},
+	"item": [
+		{
+			"name": "welcome",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjJjNmFlNTRmZjQwODlhYjA5NmE2MDUzIiwiZW1haWwiOiJwcmF0aWtAZ21haWwuY29tIiwiaWF0IjoxNjU3MTg4MTEzLCJleHAiOjE2NTcxOTUzMTN9.kFszlMuc-LbrP9w0NdWQqgZ112o5JM4C0DUCTFNtGLI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/welcome",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"welcome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Pratik Jain\",\r\n    \"email\" : \"Pratik@gmail.com\",\r\n    \"password\":\"pratik\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"pratik@gmail.com\",\r\n    \"password\": \"pratik\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/62c6ae54ff4089ab096a6053",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"62c6ae54ff4089ab096a6053"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update a user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjJjNmFlNTRmZjQwODlhYjA5NmE2MDUzIiwiZW1haWwiOiJwcmF0aWtAZ21haWwuY29tIiwiaWF0IjoxNjU3MTg4MTEzLCJleHAiOjE2NTcxOTUzMTN9.kFszlMuc-LbrP9w0NdWQqgZ112o5JM4C0DUCTFNtGLI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Pratik Shrishrima\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4001/62c6ae54ff4089ab096a6053",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4001",
+					"path": [
+						"62c6ae54ff4089ab096a6053"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete a user",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
